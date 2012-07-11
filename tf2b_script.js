@@ -17,8 +17,6 @@ function setup()
         $("li").each(function(index, element) {
             //find the div with the name
             var itemName = $(element).children('div').children('div').html();
-            console.log(itemName);
-        
             getItemDetails(itemName, function(response) {
                 var itemDetails = formatItemDetails(element, response);
                 hoverDetails(element, itemDetails);

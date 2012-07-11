@@ -1,8 +1,8 @@
 {
     // Required
     "name": "TF2 Item Linker",
-    "version": "0.1.1",
-    "manifest_version": 1,
+    "version": "0.2.0",
+    "manifest_version": 2,
     // Recommended
     "description": "Links items from the tf2 spreadsheet with online sites",
     
