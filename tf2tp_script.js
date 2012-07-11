@@ -9,8 +9,6 @@ setup();
 var ITEM_ID_ATTR = "data-tf2itemid";
 //item name
 var ITEM_NAME_ATTR = "data-name";
-//new line var
-var _NL = "<br />";
 
 /**
  * inits all scripts and makes sure items are loaded

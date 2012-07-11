@@ -16,6 +16,10 @@
             "js": ["jquery.js", "jquery.qtip-1.0.0-rc3.min.js", "base_contentscript.js", "tf2tp_script.js"]
         },
         {
+            "matches": ["http://tf2b.com/*"],
+            "js": ["jquery.js", "jquery.qtip-1.0.0-rc3.min.js", "base_contentscript.js", "tf2b_script.js"]
+        },
+        {
             "matches": ["http://tf2spreadsheet.blogspot.com/*", "http://tf2spreadsheet.blogspot.co.nz/*"],
             "js": ["jquery.js", "spreadsheet_scraper.js"]
         }

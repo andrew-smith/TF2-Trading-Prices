@@ -1,4 +1,6 @@
 
+//new line var
+var _NL = "<br />";
 
 //formats item detail description
 function formatItemDetails(element, response)
