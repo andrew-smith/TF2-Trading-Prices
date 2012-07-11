@@ -4,7 +4,7 @@
     "version": "0.1.0",
     "manifest_version": 1,
     // Recommended
-    "description": "Links items from the tf2 spreadsheet with tf2tp",
+    "description": "Links items from the tf2 spreadsheet with online sites",
     
     "background": {
         "scripts": ["jquery.js","background.js"]
@@ -13,7 +13,7 @@
     "content_scripts": [
         {
             "matches": ["http://tf2tp.com/*"],
-            "js": ["jquery.js", "jquery.qtip-1.0.0-rc3.min.js", "contentscript.js"]
+            "js": ["jquery.js", "jquery.qtip-1.0.0-rc3.min.js", "tf2tp_script.js"]
         },
         {
             "matches": ["http://tf2spreadsheet.blogspot.com/*", "http://tf2spreadsheet.blogspot.co.nz/*"],
