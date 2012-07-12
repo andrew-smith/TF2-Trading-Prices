@@ -13,11 +13,33 @@ function formatItemDetails(element, response)
         for(var i=0; i<response.items.length; i++)
         {
             var item = response.items[i];
-            itemDetails += "(" + item.quality + ") " + item.name + " (Est: " + item.est_price + ")" + _NL;
+            
+            itemDetails += "(" + wrapQualityColour(item.quality) + ") " + item.name + " (Est: " + item.est_price + ")" + _NL;
         }
     }
     
     return itemDetails;
+}
+
+
+//formats the quality string to be coloured
+function wrapQualityColour(quality)
+{
+    quality = quality.replace("Strange", (wrapSpan("Strange", "CF6A32")));
+    quality = quality.replace("Vintage", (wrapSpan("Vintage", "476291")));
+    quality = quality.replace("Unusual", (wrapSpan("Unusual", "8650AC")));
+    quality = quality.replace("Unique", (wrapSpan("Unique", "FFD700")));
+    quality = quality.replace("Genuine", (wrapSpan("Genuine", "4D7455")));
+    quality = quality.replace("Haunted", (wrapSpan("Haunted", "8650AC")));
+    quality = quality.replace("Community", (wrapSpan("Community", "70B04A")));
+    quality = quality.replace("Valve", (wrapSpan("Valve", "A50F79")));
+    
+    return quality;
+}
+
+function wrapSpan(text, colour)
+{
+    return '<span style="color:#' + colour + '">' + text + '</span>';
 }
 
 
