@@ -44,7 +44,7 @@ function priceUpdate(request)
 }
 
 //generic words that shouldn't be searched for
-var EXCLUDE_WORDS = ["Vintage", "The", "Strange", "Unusual", "Genuine"];
+var EXCLUDE_WORDS = ["vintage", "the", "strange", "unusual", "genuine"];
 
 
 //gets an item and its details
@@ -57,10 +57,11 @@ function getItemDetails(request, response)
     
     if(itemName && itemName.length > 0)
     {
+		itemName = itemName.toLowerCase();
         //loop through all the items and try and find it
         for(var i=0; i<ITEMS.length; i++)
         {
-            if(ITEMS[i].name.indexOf(itemName) != -1)
+            if(ITEMS[i].name.toLowerCase().indexOf(itemName) != -1)
             {
                 foundItems.push(ITEMS[i]);
             }
@@ -85,7 +86,7 @@ function getItemDetails(request, response)
             //loop through all the items and try and find it
             for(var i=0; i<ITEMS.length; i++)
             {
-                if(ITEMS[i].name.indexOf(itemName) != -1)
+                if(ITEMS[i].name.toLowerCase().indexOf(itemName) != -1)
                 {
                     foundItems.push(ITEMS[i]);
                 }
